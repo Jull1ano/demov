@@ -1,0 +1,252 @@
+// Screen
+// ======
+@import "grids";
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+@mixin cont() {
+  padding: 0 gutter(8);
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  color: #444;
+}
+
+.header {
+  border-top: 9px solid #737373;
+  border-bottom: 4px solid #0aa60a;
+}
+
+.hcon {
+  @include container(938px);
+  @include cont();
+}
+
+.container {
+  @include container(938px);
+  @include cont();
+}
+
+a.logo {
+  padding: 13px 0 8px;
+  float: left;
+}
+
+span.vmb {
+  float: right;
+  font-size: 23px;
+  color: #000;
+  letter-spacing: -0.5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  padding: 26px 0 0 0;
+  @include susy-breakpoint(150px 390px){
+    font-size:19px;
+  }
+}
+
+.main {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+  background: #fff;
+  margin-top: 29px;
+  float: left;
+}
+
+.g1 {
+  @include span(7);
+  margin-right: 0;
+  @include susy-breakpoint(max-width 728px){
+    @include span(12);
+  }
+}
+
+.g2 {
+  @include span(5 last);
+  padding-right: gutter();
+  @include susy-breakpoint(max-width 728px){
+    @include span(12);
+  }
+}
+
+.ins1 {
+  padding: 15px 0 0 15px;
+  float: left;
+  @include susy-breakpoint(max-width 728px){
+    padding: 15px 15px 0 15px;
+  }
+}
+
+.ins2 {
+  padding: 15px 0px 0 0;
+  float: left;
+  @include susy-breakpoint(max-width 728px){
+    padding: 15px 15px 0 15px;
+  }
+}
+
+.links {
+  @include span(7);
+  a {
+    color: #747474;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #60b73c;
+    text-decoration: none;
+  }
+  span {
+    color: #9c9c9c;
+    padding: 0 7px;
+  }
+  @include susy-breakpoint(max-width 728px){
+    @include span(12);
+    text-align: center;
+    float: none;
+  }
+}
+
+.social {
+  @include span(5 last);
+  @include susy-breakpoint(max-width 728px){
+    @include span(12);
+    text-align: center;
+
+  }
+}
+
+.imgx3 {
+  float: right;
+  @include susy-breakpoint(max-width 728px){
+    float: none;
+    padding:gutter(6) 0 0 0;
+  }
+}
+
+.footer {
+  padding-top: 20px;
+  float: left;
+}
+
+.cpy {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #9b9b9b;
+  margin-top: 20px;
+  @include span(12);
+  color: #747474;
+  font-size: 12px;
+}
+
+.txt {
+  float: left;
+  a {
+    color: #1091c7;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #60b73c;
+    text-decoration: none;
+  }
+  border-right: 1px solid #dedede;
+  padding-right: 15px;
+  margin: 15px 0;
+  @include susy-breakpoint(max-width 728px){
+    border-right: 0px;
+  }
+}
+
+.txt2 {
+  @include span(12);
+  @include susy-breakpoint(max-width 728px){
+    padding-bottom:gutter(6);
+  }
+}
+
+.imgx1 {
+  @include span(12);
+  text-align: center;
+  margin-top: 25px;
+}
+
+.dex {
+  @include span(12);
+  text-align: center;
+  padding: 15px 0 20px;
+}
+
+.imgx2 {
+  @include span(12);
+  text-align: center;
+}
+
+.ban1 {
+  background: url("../img/banner.jpg") center no-repeat;
+  background-size: cover;
+  height: 149px;
+  width: 100%;
+  float: left;
+}
+
+.ban2 {
+  background: url("../img/banner2.jpg") center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 149px;
+  float: left;
+}
+
+.inh {
+  @include container(75%);
+  @include susy-breakpoint(728px 1024px){
+    @include container(85%);
+  }
+  @include susy-breakpoint(510px 728px){
+    @include container(65%);
+  }
+  @include susy-breakpoint(150px 390px){
+    @include container(95%);
+  }
+
+  padding-top: gutter(10);
+  h1 {
+    color: #fff;
+    font-size: 26px;
+    line-height: 28px;
+    @include susy-breakpoint(728px 880px){
+      font-size: 22px;
+      line-height: 26px;
+      padding-top: gutter(10);
+    }
+    @include susy-breakpoint(120px 510px){
+      font-size: 22px;
+      line-height: 26px;
+      padding-top: gutter(10);
+    }
+  }
+  h2 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 17px;
+    margin-top: -5px;
+    @include susy-breakpoint(728px 880px){
+      font-size: 13px;
+      line-height: 15px;
+    }
+    @include susy-breakpoint(120px 510px){
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+  .green {
+    color: #2cd644;
+  }
+}
